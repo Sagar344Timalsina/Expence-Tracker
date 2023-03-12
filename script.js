@@ -103,8 +103,9 @@ function updateData(id) {
     document.getElementById("amount").value = list[id].amount;
    
 
-    document.getElementById("update-expense").onClick = function () {
+    document.querySelector("#update-expense").onclick = function () {
         // deleteData(id);
+        console.log(id);
         if (validateData() == true) {
             list[id].type = document.getElementById("type").value;
             list[id].user = document.getElementById("name").value;
@@ -112,7 +113,7 @@ function updateData(id) {
             list[id].amount = document.getElementById("amount").value;
 
 
-            // localStorage.setItem("list", JSON.stringify(list));
+            localStorage.setItem("list", JSON.stringify(list));
             showData();
             document.getElementById("type").value = "";
             document.getElementById("name").value = "";
