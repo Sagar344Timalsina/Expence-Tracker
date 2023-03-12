@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <link rel="stylesheet" href="invoice.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="main-container-invoice">
+        <header class="header">
+            <h1> Invoice Page</h1>
+            <hr />
+        </header>
+        <header class="below-header">
+            <h3>Name::</h3>
+            <span id="name"></span>
+            <h3>Company Name ::</h3>
+            <span id="compname"></span>
+
+        </header>
+        <hr />
+        <section>
+            <div class="title-main">
+                <h1>This is the Invoice Page </h1>
+            </div>
+            <div class="table-main">
+                <div class="table-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="expenseTable">
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <hr>
+            <div class="total-menu">
+                <h1>Total::</h1>
+                <h4 id="total"></h4>
+            </div>
+            <div class="btn-pdf">
+                <button id="btn-pdf">Download PDF</button>
+            </div>
+            <div class="btn-new">
+                <button id="btn-new" onclick="handleNewRecords()">New Records</button>
+            </div>
+        </section>
+    </div>
+    <script src="scriptInvoice.js"></script>
+    <script>
+        let div = document.querySelector(".main-container-invoice");
+        let btn = document.querySelector("#btn-pdf");
+        btn.addEventListener('click', () => {
+            html2pdf().from(div).save();
+        })
+    </script>
+</body>
+
+</html>

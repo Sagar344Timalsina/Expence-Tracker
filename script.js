@@ -101,7 +101,7 @@ function updateData(id) {
     document.getElementById("name").value = list[id].user;
     document.getElementById("date").value = list[id].date;
     document.getElementById("amount").value = list[id].amount;
-   
+
 
     document.querySelector("#update-expense").onclick = function () {
         // deleteData(id);
@@ -120,12 +120,17 @@ function updateData(id) {
             document.getElementById("date").value = "";
             document.getElementById("amount").value = "";
             // console.log(id);
-           
+
         }
         document.getElementById("update-expense").style.display = "none";
         document.getElementById("new-expense").style.display = "block";
     }
-    
+
+}
+
+
+function navigateInvoicePage() {
+    location.replace("invoice.html");
 }
 
 
