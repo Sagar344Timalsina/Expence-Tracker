@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="upper-header">
+                <h1>Expense Tracker App</h1>
+            </div>
+            <div class="lower-header">
+                <div class="lower-header-one">
+                    Type::<select id="type">
+                        <option value=""></option>
+                        <option value="card">Card</option>
+                        <option value="cash">Cash</option>
+                        <option value="others">Others</option>
+                    </select>
+                    Name::<input type="text" id="name" />
+                </div>
+                <div class="lower-header-two">
+                    Date::<input type="date" id="date" />
+                    Amount::<input type="text" id="amount"/>
+                </div>
+                <div class="button" id="submit">
+                    <button class="btn-button" id="new-expense" onclick="addData()">Add new Expense</button>
+                </div>
+                <div class="button" id="update">
+                    <button class="btn-button" id="update-expense" onclick="addData()">Update</button>
+                </div>
+
+            </div>
+            
+        </header>
+
+        
+    </div>
+   <div class="wrapper-table">
+    <div class="table-content">
+        <table >
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="expenseTable">
+               <!-- <tr>
+                <td>Type</td>
+                <td>Name</td>
+                <td>Date</td>
+                <td>Amount</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+               </tr> -->
+            </tbody>
+        </table>
+    </div>
+   </div>
+    
+
+
+   <script  src="./script.js"></script>
+</body>
+</html>
