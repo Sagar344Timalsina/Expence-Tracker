@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main__container">
+       <div class="form-box">
+        <header class="first__div">
+            <div class="button-login-sigup">
+                <div id="btn"></div>
+                <button class="toggle-button" onclick="loginButton()">Login</button>
+                <button class="toggle-button" onclick="registerButton()">Signup</button>
+        </div>
+        <div class="title-header">
+            <div class="header__title">
+                <h2>Welcome!!</h2>
+            </div>
+            <div class="sub__title">
+                <h3>Login to your account</h3>
+            </div>
+        </div>
+        </header>
+        <section class="main__body">
+           <form id="login" class="input-form">
+            <input type="text" class="input-field" id="user" placeholder="UserName" required>
+            <input type="text" class="input-field" id="password" placeholder="Password" required>
+            <button  class="submit-btn" onclick="login()" >Log in</button>
+        </form>
+           <form id="register" class="input-form">
+            <input type="text" class="input-field "  id="username" placeholder="UserName" required>
+            <input type="password" class="input-field " id="pass" placeholder="Password" required>
+            <input type="password" class="input-field " id="conpas" placeholder="Confirm-Password" required>
+            <button  class="submit-btn" onclick="signUp()">Register</button>
+        </form>
+        </section>
+        
+        </div>
+       </div>
+    </div>
+    <script src="../Javascript/loginPage.js"></script>
+</body>
+</html>
